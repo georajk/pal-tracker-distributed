@@ -1,10 +1,17 @@
 package io.pivotal.pal.tracker.allocations;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestOperations;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class ProjectClient {
 
+    private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final Map<Long, ProjectInfo> projectsCache = new ConcurrentHashMap<>();
     private final RestOperations restOperations;
     private final String registrationServerEndpoint;
 
