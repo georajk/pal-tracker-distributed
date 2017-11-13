@@ -1,7 +1,7 @@
 applications:
 - name: tracker-registration
   path: ./applications/registration-server/build/libs/registration-server.jar
-  host: registration-pal-geo
+  host: registration-pal-geo-s1
   memory: 1G
   instances: 1
   env:

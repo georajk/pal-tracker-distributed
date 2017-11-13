@@ -1,7 +1,7 @@
 applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
-  host: allocations-pal-geo
+  host: allocations-pal-geo-s1
   memory: 1G
   instances: 1
   env:
